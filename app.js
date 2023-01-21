@@ -1,6 +1,6 @@
 const input = document.getElementById("input-task");
 const container = document.getElementById("container-tasks");
-
+const addBtn = document.getElementById("add-button");
 
 function createBtnDelete(){
     let btnDelete = document.createElement("button");
@@ -9,6 +9,7 @@ function createBtnDelete(){
 
     iconDelete.setAttribute("class", "fa-solid fa-circle-xmark");
     btnDelete.appendChild(iconDelete);
+    
     btnDelete.setAttribute("class", "btn-delete");
 
     btnDelete.addEventListener("click", taskDelete);
@@ -43,8 +44,15 @@ let taskCheck = function(btnCheck){
     tarefaConcluida.children[0].setAttribute("class", "concluido");
 }
 
+let inputVerify = function(){
+    if(input.value == ""){
+        alert("Escreva uma tarefa");
+    }else{
+        addTask()
+    }
+}
 
-function addTask(){
+let addTask = function(){
     let taskContainer = document.createElement("div");
     let task = document.createElement("p");
     task.innerHTML= input.value;
@@ -62,6 +70,19 @@ function addTask(){
     taskContainer.appendChild(createBtnDelete());
     
 }
+
+
+
+addBtn.addEventListener("click", inputVerify);
+
+document.addEventListener("keypress", (e) =>{
+    if(e.key === "Enter"){
+        e.preventDefault();
+        inputVerify();
+    }
+})
+
+
 
 
 
