@@ -1,0 +1,119 @@
+*{
+  margin: 0;  
+  padding: 0;
+}
+:root{
+    /*=== Cores ===*/
+    --var-cor-principal:  rgb(4, 4, 27);
+    --var-cor-secundaria: ;
+    --var-cor-terciaria: rgb(11, 11, 71);
+
+    /*=== Fonts ===*/
+
+    --var-font-principal: 'Baloo 2', cursive;
+    --var-font-secundaria:'League Spartan', sans-serif;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    background-color: var(--var-cor-principal);
+}
+
+/*=== Task Menu ===*/
+
+#title-menu{
+    font-family: 'Baloo 2', cursive;
+    color: var(--var-cor-principal);
+    font-weight: 600;
+    font-size: 3em;
+}
+.container {
+    width: 60vw;
+    height: 70vh;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    border-radius: 20px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 8px 8px 5px rgba(0, 0, 0, 0.301);
+}
+#container-tasks{
+    width: 80%;
+    height: 80%;
+    margin: 20px;    
+    overflow: hidden auto;
+}
+.forms{
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+}
+#input-task{
+    width: 75%;
+    padding: 12px;
+    border-radius: 10px;
+    border: 0;
+    background-color: rgb(240, 240, 240);
+}
+#add-button{
+    width: 20%;
+    border: 0;
+    border-radius: 10px;
+    background-color: var(--var-cor-principal);
+    font-family: var(--var-font-principal);
+    font-size: 1em;
+    color: white;
+}
+#add-button:hover{
+    background-color: var(--var-cor-terciaria);
+    cursor: pointer;
+}
+
+/*=== Tasks ===*/
+
+.task{
+    font-size: 1.8em;
+    font-family: var(--var-font-secundaria);
+    font-weight: 400;
+    margin-right: auto;
+}
+
+.concluido {
+    font-size: 1.8em;
+    font-family: var(--var-font-secundaria);
+    font-weight: 400;
+    margin-right: auto;
+    text-decoration: line-through;
+}
+
+
+.task-container{
+    padding: 10px;
+    margin: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    background-color: rgb(241, 241, 241);
+    border-radius: 10px;
+}
+
+
+
+.btn-delete, .btn-check{
+    border: 0;
+    margin: 5px;
+    font-size: 1.3em;
+    color: var(--var-cor-principal);
+}
+
+.btn-delete:hover, .btn-check:hover{
+    color: var(--var-cor-terciaria);
+    cursor: pointer;
+}
+
