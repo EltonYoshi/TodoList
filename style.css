@@ -5,7 +5,7 @@
 :root{
     /*=== Cores ===*/
     --var-cor-principal:  rgb(4, 4, 27);
-    --var-cor-secundaria: ;
+    --var-cor-secundaria: white;
     --var-cor-terciaria: rgb(11, 11, 71);
 
     /*=== Fonts ===*/
@@ -19,7 +19,7 @@ body{
     display: flex;
     justify-content: center;
     align-items:center;
-    background-color: var(--var-cor-principal);
+    background-color: var(--var-cor-secundaria);
 }
 
 /*=== Task Menu ===*/
@@ -31,8 +31,8 @@ body{
     font-size: 3em;
 }
 .container {
-    width: 60vw;
-    height: 70vh;
+    width: 40vw;
+    height: 80vh;
     padding: 30px;
     display: flex;
     flex-direction: column;
@@ -41,7 +41,7 @@ body{
     box-sizing: border-box;
     border-radius: 20px;
     background-color: rgb(255, 255, 255);
-    box-shadow: 8px 8px 5px rgba(0, 0, 0, 0.301);
+    box-shadow: 4px 4px 8px 2px rgba(0, 0, 0, 0.212);
 }
 #container-tasks{
     width: 80%;
@@ -51,15 +51,19 @@ body{
 }
 .forms{
     width: 80%;
+    padding: 3px;
     display: flex;
     justify-content: space-between;
+    border: 2px solid var(--var-cor-principal);
+    border-radius: 10px;
 }
 #input-task{
     width: 75%;
     padding: 12px;
     border-radius: 10px;
     border: 0;
-    background-color: rgb(240, 240, 240);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
 }
 #add-button{
     width: 20%;
@@ -78,6 +82,7 @@ body{
 /*=== Tasks ===*/
 
 .task{
+    margin: 5px;
     font-size: 1.8em;
     font-family: var(--var-font-secundaria);
     font-weight: 400;
@@ -94,26 +99,30 @@ body{
 
 
 .task-container{
+    height: 50px;
     padding: 10px;
-    margin: 10px;
+    margin: 12px;
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
     background-color: rgb(241, 241, 241);
     border-radius: 10px;
+    box-sizing: border-box;
+
 }
-
-
 
 .btn-delete, .btn-check{
     border: 0;
     margin: 5px;
     font-size: 1.3em;
     color: var(--var-cor-principal);
+
 }
 
 .btn-delete:hover, .btn-check:hover{
     color: var(--var-cor-terciaria);
+    font-size: 1.35em;
     cursor: pointer;
+
 }
 
